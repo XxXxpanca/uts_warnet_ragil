@@ -16,9 +16,9 @@ if (isset($_POST['submit'])) {
     $insert = $con->query($insert_sql);
 
     if ($insert) {
-        header('location:view.php');
+        header('location:view.php?pesan=tambah');
     } else {
-        header('location:view.php');
+        header('location:view.php?pesan=tambah');
     }
 }
 

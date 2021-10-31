@@ -33,7 +33,7 @@ require_once('Connection.php');
 
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
-                            <div class="h3 text-center">Data Warnet</div>
+                            <div class="h3 text-center">Data Billing</div>
                             <div class="float-end">
                                 <a href="add.php" class="badge bg-info py-2 px-2 small text-white fw-bold text-decoration-none"><i class="bi bi-plus"></i> Add Surat</a>
                             </div>

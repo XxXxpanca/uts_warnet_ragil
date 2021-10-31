@@ -17,9 +17,9 @@ if (isset($_POST['submit'])) {
     $update = $con->query($update_sql);
 
     if ($update) {
-        header('location:view.php');
+        header('location:view.php?pesan=update');
     } else {
-        header('location:view.php');
+        header('location:view.php?pesan=update');
     }
 }
 

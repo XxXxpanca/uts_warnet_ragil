@@ -1,5 +1,7 @@
 <?php
 require_once('Connection.php');
+$sql = "SELECT * FROM `tbl_paket`";
+$result = $con->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +24,7 @@ require_once('Connection.php');
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header bg-white text-uppercase">
-                            <div class="h3 text-center">Data Billing</div>
+                            <div class="h3 text-center">Tambah Data Billing</div>
                         </div>
                         <div class="card-body">
                             <form action="add_proses.php" method="post">
@@ -59,10 +61,16 @@ require_once('Connection.php');
                                             <input type="text" name="nama_operator" id="nama_operator" class="form-control">
                                         </div>
                                     </div>
+
                                     <div class="col-lg-6 mt-3">
                                         <div class="form-group">
                                             <small>Paket</small>
-                                            <input type="number" name="jenis_paket" id="jenis_paket" class="form-control">
+                                            <select name="jenis_paket" id="jenis_paket" class="form-control">
+                                                <option value="">Silahkan Pilih Paket...</option>
+                                                <?php foreach ($result as $val) { ?>
+                                                    <option value="<?= $val['paket'] ?>"><?= $val['paket'] ?></option>
+                                                <?php } ?>
+                                            </select>
                                         </div>
                                     </div>
 
